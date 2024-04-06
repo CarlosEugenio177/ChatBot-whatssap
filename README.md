@@ -14,3 +14,5 @@ Versão 1.0.0 06/04/2024
 Indentifica mensagens apagadas e manda um audio
 
 Indentifica uma mensagem pre programada e manda uma resposta pre pronta
+
+Inicie o bot com "npm start" no seu terminal
