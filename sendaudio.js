@@ -5,7 +5,7 @@ const { MessageMedia } = require('whatsapp-web.js');
 async function sendaudio(client) {
     client.on('message_revoke_everyone', async (after, before) => {
         if (before) {
-            const audioPath = path.join(__dirname, '.mp3'); // Assuming meme.mp3 is in the same directory as sendaudio.js
+            const audioPath = path.join(__dirname, 'seuaudio.mp3'); // Assuming meme.mp3 is in the same directory as sendaudio.js
 
             try {
                 if (fs.existsSync(audioPath)) {
@@ -13,7 +13,7 @@ async function sendaudio(client) {
 
                     const audioData = fs.readFileSync(audioPath, { encoding: 'base64' });
                     const mimetype = 'audio/mp3';
-                    const filename = '.mp3';
+                    const filename = 'seuaudio.mp3';
                     const filesize = fs.statSync(audioPath).size;
 
                     const audioMedia = new MessageMedia(mimetype, audioData, filename, filesize);
