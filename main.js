@@ -3,8 +3,9 @@ const qrcode = require('qrcode-terminal');
 const fs = require('fs');
 const path = require('path');
 
-// Import the sendaudio function
-const { sendaudio } = require('./sendaudio.js');
+// Import the sendaudio and Message function
+const { sendMedia } = require('./sendmedia.js');
+const {sendMessage} = require('./sendmessage.js');
 
 // Create a new client instance
 const client = new Client({
@@ -27,16 +28,13 @@ client.on('qr', (qr) => {
     qrcode.generate(qr, { small: true });
 });
 
-// Listening to all incoming messages
-client.on('message_create', message => {
-    if (message.body === '!bomdia') {
-        // reply back "pong" directly to the message
-        message.reply('não sou um bot');
-    }
-});
 
 // Start your client
 client.initialize();
 
 // Function to handle sending audio
-sendaudio(client);
+sendMedia(client);
+
+// Chame a função sendMessage para lidar com o envio de mensagens
+sendMessage(client);
+
