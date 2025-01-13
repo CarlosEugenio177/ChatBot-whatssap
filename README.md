@@ -1,5 +1,5 @@
 # ChatBot-whatssap
-Chatbot criado para Whatssap! (Novas funções serão lançadas futuramente)
+Chatbot criado para Whatssap!
 
 Por favor instale as depêndencias
 
