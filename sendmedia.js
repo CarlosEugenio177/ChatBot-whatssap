@@ -1,5 +1,4 @@
-/*  FUNÇÃO NATIVA DE AUDIO COMENTADA 
-    OBS: USE POR CONTA E RISCO!
+
 const fs = require('fs');
 const path = require('path');
 const { MessageMedia } = require('whatsapp-web.js');
@@ -35,7 +34,7 @@ async function sendaudio(client) {
 }
 
 module.exports = { sendaudio };
-*/
+
 
 const fs = require('fs');
 const path = require('path');
