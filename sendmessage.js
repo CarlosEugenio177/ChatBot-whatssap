@@ -1,14 +1,4 @@
-/* FUNÇÃO TESTE PARA LEITURA DE QUALQUER MENSAGEM
-        OBS: O COD ABAIXO GERA UM LOOP, RECOMENDO O USO APÓS A PROXIMA ATUALIZAÇÃO DO COD(se eu tiver atualizado!)
 
-async function sendMessage(client) {
-    client.on('message', async (message) => {
-        // Responde a qualquer mensagem recebida
-        await client.sendMessage(message.from, 'Olá! Sou um bot e recebi sua mensagem.');
-    });
-
-}
-*/
 
  async function sendMessage(client) {
     client.on('message_create', message => {
